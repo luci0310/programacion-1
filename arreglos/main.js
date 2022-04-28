@@ -34,7 +34,7 @@ series.unshift("grey's anatomy")
 console.log(series)
 
 //como elimino el primer elemento de un arreglo 
-series.shift("grey's anatomy")
+series.shift()
 console.log(series)
 
 //como obtener la posicion de un elemento 
@@ -48,7 +48,7 @@ console.log('indice obtenido: '+indice)
 series.splice(indice,1)
 console.log(series)
 
-//2do caso-eliminar mas de un elemento
+//2do caso-eliminar mas de un elemento consecutivo 
 const posicion=1;
 const numeroElementos=2;
 const elementosEliminados=series.splice(posicion,numeroElementos)
