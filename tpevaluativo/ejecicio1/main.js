@@ -1,18 +1,19 @@
-function calculo(auto){
-    if(auto==1750000){
-        const r1=(1750000*5/100)
-        return r1
+function calcular(){
+    const resultado=document.getElementById("auto").value
+    let respuesta= null
+    if(resultado==1750000){
+    respuesta=(1750000-((15/100)*1750000))
+    //fort ka
     }
-    else if(auto==1950000){
-        const r2=(10/100*1950000)
-        return r2
-    }else if(auto==2560000){
-        const r3=(15/100*2560000)
-        return r3
+    else if(resultado==1950000){
+    respuesta=(1950000-((5/100)*1950000))
+    //ford fiesta
     }
+    else if(resultado==2560000){
+    respuesta=(2560000-((10/100)*2560000))
+    //ford focus
+    }
+document.getElementById("d_resultado").textContent=respuesta
 }
-function mostrar(){
-    const auto=document.getElementById("auto").value
-    const resultado=calculo(auto)
-    document.getElementById("h2_r").textContent=resultado
-}
+const boton=document.getElementById("btn_calcular")
+boton.addEventListener("click",calcular)
