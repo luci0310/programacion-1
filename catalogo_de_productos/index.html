@@ -7,26 +7,26 @@
     <title>catalogo de productos</title>
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-light">
+<body background="idea1.jpg">
+    <nav class="navbar navbar-expand-lg" style="background-color: #002443;">
         <a class="navbar-brand" href="#">
-            <img src="descarga.png" alt="" width="30" height="24">
+            <img src="images.png" alt="" width="70" height="50">
         </a>
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Catalogo de productos</a>
+          <a onclick="obtener_catalogo('jewelery')" class="navbar-brand text-white" href="#">Joyería</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a onclick="obtener_catalogo('electronics')" class="nav-link active" aria-current="page" href="#">Tecnologia</a>
+                <a onclick="obtener_catalogo('electronics')" class="nav-link active text-white" aria-current="page" href="#">Tecnologia</a>
               </li>
               <li class="nav-item">
-                <a onclick="obtener_catalogo('mens clothing')" class="nav-link active" aria-current="page" href="#">Ropa de hombre</a>
+                <a onclick="obtener_catalogo('men\'s clothing')" class="nav-link active text-white" aria-current="page" href="#">Ropa de hombre</a>
               </li>
               <li class="nav-item">
-                <a onclick="" class="nav-link active" aria-current="page" href="#">catalogo 3</a>
+                <a onclick="obtener_catalogo('women\'s clothing')" class="nav-link active text-white" aria-current="page" href="#">Ropa de mujer</a>
               </li>
             </ul>
           </div>

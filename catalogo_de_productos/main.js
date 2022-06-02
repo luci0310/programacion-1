@@ -10,7 +10,7 @@ async function obtener_catalogo(cat){
             <h5 class="card-title">${element.title}</h5>
             <p class="card-text">${element.description}</p>
             <h6 class="card-title">${element.title}</h6>
-            <a href="#" class="btn btn-primary">${element.price}</a>
+            <a href="#" class="btn btn-primary">$${element.price}</a>
             </div>
         </div>
         </div>`
@@ -18,5 +18,4 @@ async function obtener_catalogo(cat){
     });
     document.getElementById("row_datos").innerHTML=columnas.join('')
 }
-
 obtener_catalogo('jewelery')
