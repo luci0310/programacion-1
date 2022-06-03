@@ -1,6 +1,7 @@
 //siempre va con mayuscula la primera letra
 export  default class Trapecio{
     //metodo propio de la clase, se dispara cuando hay una instancia(forma parte de una clase)
+    //receptor de datos 
     constructor(bma,bme,h){
         this.base_mayor=bma
         this.base_menor=bme
