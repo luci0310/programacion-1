@@ -1,8 +1,14 @@
 async function obtener_catalogo(cat){
     const datos= await fetch('https://fakestoreapi.com/products/category/'+cat)
     const variable=await datos.json()
+
+
+
     let columnas=[]
+    
     variable.forEach(element => {
+
+
         let columna=`<div class="col-lg-3">
         <div class="card" style="width: 18rem;">
             <img src=${element.image} class="card-img-top" alt="...">
@@ -14,8 +20,12 @@ async function obtener_catalogo(cat){
             </div>
         </div>
         </div>`
+
     columnas.push(columna)
+
     });
+
     document.getElementById("row_datos").innerHTML=columnas.join('')
+
 }
 obtener_catalogo('jewelery')
