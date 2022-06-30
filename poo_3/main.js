@@ -2,8 +2,21 @@
 import Producto from "./producto.js";
 
 
-function ejecutar(){
-    const guardar=new Producto()
-    guardar.consumir_api()
+function guardar()
+{
+    let descripcion=document.getElementById("descripcion").value
+    let precio=document.getElementById("precio").value
+    let categoria=document.getElementById("categoria").value
+
+    let producto=new Producto(descripcion,precio,categoria)
+
+    //invocamos(ejecutamos) el metodo guardar_producto, perteneciente a la xlase prdocuto
+    producto.guardar_producto()
 }
-ejecutar()
+document.getElementById("btn_guardar").addEventListener('click',guardar)
+
+function listar(){
+    let producto=new producto()
+    producto.obtener_producto()
+}
+listar()
