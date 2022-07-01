@@ -16,7 +16,7 @@ function guardar()
 document.getElementById("btn_guardar").addEventListener('click',guardar)
 
 function listar(){
-    let producto=new producto()
-    producto.obtener_producto()
+    let producto=new Producto()
+    producto.obtener_productos()
 }
 listar()

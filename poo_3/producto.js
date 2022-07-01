@@ -25,7 +25,7 @@ export default class Producto{
 
             /*
             -guardar en localStorage
-            -el setitem crea(si es q no hay)
+            -el setitem crea un item(si es q no hay)
             -el json.stringify es para pasar los datos a json
             */
 
@@ -33,6 +33,24 @@ export default class Producto{
         }
     }
     obtener_productos(){
-        
+        /*
+        Recolectamos todos los productos alojados en el item "productos"
+        que estan en notacion JSON. Debemos convertirlo en una expresion
+        nativa de Javascript (es decir, hacemos un JSON.pasrse())
+        */
+       let lista_productos= JSON.parse(localStorage.getItem("Productos" ))
+
+       let filas=[]
+       lista_productos.forEach((element,index) => {
+           let fila=`
+           <tr>
+           <td>${index+1}</td>
+           <td>${element.descripcion}</td>
+           <td>${element.precio}</td>
+           <td>${element.categoria}</td>
+           </tr>`   
+           filas.push(fila)
+       });
+       document.getElementById("body").innerHTML=filas.join('')
     }
 }
