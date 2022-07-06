@@ -32,6 +32,7 @@ export default class Producto{
             localStorage.setItem("Productos", JSON.stringify(lista_productos))
         }
     }
+    
     obtener_productos(){
         /*
         Recolectamos todos los productos alojados en el item "productos"
@@ -44,13 +45,29 @@ export default class Producto{
        lista_productos.forEach((element,index) => {
            let fila=`
            <tr>
-           <td>${index+1}</td>
-           <td>${element.descripcion}</td>
-           <td>${element.precio}</td>
-           <td>${element.categoria}</td>
-           </tr>`   
+                <td>${index+1}</td>
+                <td>${element.descripcion}</td>
+                <td>${element.precio}</td>
+                <td>${element.categoria}</td>
+                <td>
+                        <button onclick="almacenar_indice(${index})" id="btn_guardar" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mymodal">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                </td>
+            </tr>`   
            filas.push(fila)
        });
        document.getElementById("body").innerHTML=filas.join('')
     }
+
+    eliminar_producto(indice){
+       let lista_productos=JSON.parse( localStorage.getItem("Productos"))
+
+       lista_productos.splice(indice,1)
+
+       localStorage.setItem("Productos",JSON.stringify(lista_productos))
+       
+       this.obtener_productos()
+    }
 }
+

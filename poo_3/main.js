@@ -20,3 +20,16 @@ function listar(){
     producto.obtener_productos()
 }
 listar()
+
+function eliminar(){
+
+    let indice=localStorage.getItem("indice")
+
+    //creamos una instancia para acceder a los metodos/atributos a la clase producto
+    let producto=new producto()
+
+    //haciendo uso de la instancia
+    //invocamos el método eliminar_prodcuto()
+    producto.eliminar_producto(indice)
+}
+document.getElementById("btn_eliminar").addEventListener("click",eliminar)
