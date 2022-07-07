@@ -31,6 +31,7 @@ export default class Producto{
 
             localStorage.setItem("Productos", JSON.stringify(lista_productos))
         }
+        this.obtener_productos()
     }
     
     obtener_productos(){
@@ -53,6 +54,9 @@ export default class Producto{
                         <button onclick="almacenar_indice(${index})" id="btn_guardar" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mymodal">
                             <i class="fa fa-trash"></i>
                         </button>
+                        <button class="btn btn-primary btn-sm" onclick="editar(${index})">
+                        <i class="fa fa-edit"></i>
+                        </button>
                 </td>
             </tr>`   
            filas.push(fila)
@@ -68,6 +72,26 @@ export default class Producto{
        localStorage.setItem("Productos",JSON.stringify(lista_productos))
        
        this.obtener_productos()
+    }
+    actualizar_producto(){
+        //busco el indice
+        let indice=localStorage.getItem("indice")
+
+        //traigo el listado de productos
+        JSON.parse(localStorage.getItem("Productos"))
+
+        //sobreescribo la nueva descripcion
+        lista_productos[indice].descripcion=document.getElementById("descripcion")
+        lista_productos[indice].precio=document.getElementById("precio")
+        lista_productos[indice].categoria=document.getElementById("categoria")
+
+        localStorage.setItem("Productos", JSON.stringify(lista_producto))
+
+        //refresco
+        this.obtener_productos()
+
+        document.getElementById("btn_guardar").style.display="block"
+        document.getElementById("btn_actualizar").style.display="none"
     }
 }
 
