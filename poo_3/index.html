@@ -19,24 +19,27 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="mb-4">
-                    <label class="form-label">Descripcion</label>
-                    <input class="form-control" id="descripcion" type="text" placeholder="ingrese una breve descripcion">
+                <form id="form_producto">
+                    <div class="mb-4">
+                        <label class="form-label">Descripcion</label>
+                        <input class="form-control" id="descripcion" type="text" placeholder="ingrese una breve descripcion">
+                    
+                    
+                        <label class="form-label" for="" >Precio de venta</label>
+                        <input class="form-control" id="precio" type="text" placeholder="ingrese el precio de venta">
+                    </div>
+                    <div class="mb-4">
+                        <select name="cateroria" id="categoria" class="form-select" aria-label="Default select example" >
+                        <option selected>Categoria </option>
+                        <option value="1">Heladera</option>
+                        <option value="2">TV</option>
+                        <option value="3">Microondas</option>
+                        <option value="4">Licuadora</option>
+                        <option value="5">Tostadora</option>
+                        </select>
+                    </div>
+                </form>
                 
-                
-                    <label class="form-label" for="" >Precio de venta</label>
-                    <input class="form-control" id="precio" type="text" placeholder="ingrese el precio de venta">
-                </div>
-                <div class="mb-4">
-                    <select name="cateroria" id="categoria" class="form-select" aria-label="Default select example" >
-                    <option selected>Categoria </option>
-                    <option value="1">Heladera</option>
-                    <option value="2">TV</option>
-                    <option value="3">Microondas</option>
-                    <option value="4">Licuadora</option>
-                    <option value="5">Tostadora</option>
-                    </select>
-                </div>
                 <div  class="d-grid gap-2 col-6 mx-auto">
                     <button class="btn btn-outline-primary" id="btn_guardar">Guardar</button>
                 </div>  
