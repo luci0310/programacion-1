@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tpe3-ejercicio1</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Carga de productos</span>
+        </div>
+    </nav>
+    <br>
+    <div class="conteiner">
+        <div class="row">
+            <div class="col-lg-4">
+                <form id="form_producto">
+                    <div class="mb-4">
+                        <label class="form-label">Descripción</label>
+                        <input class="form-control" id="descripcion" type="text" placeholder="ingrese una breve descripcion">
+    
+                        <label class="form-label">Precio del producto</label>
+                        <input class="form-control" id="precio" type="text" placeholder="ingrese el precio del producto">
+    
+                        <label class="form-label">Imágen</label>
+                        <input class="form-control" id="imagen" type="text" placeholder="ingrese la URL del producto">
+                        
+                        <label class="form-label">Aroma del producto</label>
+                        <input class="form-control" id="aroma" type="text" placeholder="ingrese el aroma del prducto">
+                    </div>
+                    <div class="mb-4">
+                        <select name="categoria" id="categoria" class="form-select" aria-label="Default select example" >
+                            <option selected>Categorias</option>
+                            <option value="1">Aromatizador de telas y ambiente en 120ml</option>
+                            <option value="2">Aromatizador de telas y ambiente en 500ml</option>
+                            <option value="3">Aerosol en 270ml</option>
+                            <option value="4">Perfumes personales femeninos</option>
+                            <option value="5">Perfumes personales masculinos</option>
+                        </select>
+                    </div>
+                </form>
+
+                <div  class="d-grid gap-2 col-6 mx-auto"  >
+                    <button class="btn btn-secondary" id="btn_guardar">Guardar</button>
+                </div>  
+                <br> 
+                <div  class="d-grid gap-2 col-6 mx-auto">
+                    <button style="display: none;" class="btn btn-secondary" id="btn_actualizar">Actualizar</button>
+                </div>    
+            </div>
+            <div class="col-lg-8">
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Descripcion</th>
+                        <th>Precio del producto</th>
+                        <th>Imágen</th>
+                        <th>Aroma del producto</th>
+                        <th>Categoria</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <tbody id="body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="mymodal" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Advertencia!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="fw-bold">¿Está seguro de eliminar este producto?</p>
+              <p style="font-size: small;">(si toca el boton "eliminar" este producto se eliminara permanentemente)</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">X</button>
+              <button type="button" id="btn_eliminar" class="btn btn-danger">Eliminar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+    <script src="main.js" type="module"></script>
+    <script src="encontrar_indice.js"></script>
+</body>
+</html>
