@@ -35,8 +35,14 @@ document.getElementById("btn_eliminar").addEventListener("click",eliminar)
 
 function actualizar()
 {
-    let perfumes=new Perfumes
+    let perfumes=new Perfumes()
 
     perfumes.actualizar_producto()
 }
 document.getElementById("btn_actualizar").addEventListener("click",actualizar)
+
+
+
+
+
+

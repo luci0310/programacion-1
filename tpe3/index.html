@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body background="fondo.jpg">
     <nav class="navbar bg-light">
         <div class="container-fluid">
           <span class="navbar-brand mb-0 h1">Carga de productos</span>
@@ -27,11 +27,9 @@
                         <label class="form-label">Precio del producto</label>
                         <input class="form-control" id="precio" type="text" placeholder="ingrese el precio del producto">
     
-                        <label class="form-label">Imágen</label>
-                        <input class="form-control" id="imagen" type="text" placeholder="ingrese la URL del producto">
                         
                         <label class="form-label">Aroma del producto</label>
-                        <input class="form-control" id="aroma" type="text" placeholder="ingrese el aroma del prducto">
+                        <input class="form-control" id="aroma" type="text" placeholder="ingrese el aroma del producto">
                     </div>
                     <div class="mb-4">
                         <select name="categoria" id="categoria" class="form-select" aria-label="Default select example" >
@@ -41,6 +39,15 @@
                             <option value="3">Aerosol en 270ml</option>
                             <option value="4">Perfumes personales femeninos</option>
                             <option value="5">Perfumes personales masculinos</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <select name="imagen" id="imagen" class="form-select" aria-label="Default select example">
+                            <option selected>imagen</option>
+                            <option value="120ml.jpeg">Aromatizador de telas y ambiente en 120ml</option>
+                            <option value="500ml.jpg">Aromatizador de telas y ambiente en 500ml</option>
+                            <option value="aerosol.jpg">Aerosol en 270ml</option>
                         </select>
                     </div>
                 </form>

@@ -42,7 +42,9 @@ export default class Perfumes{
                 <td>${index+1}</td>
                 <td>${element.descripcion}</td>
                 <td>${element.precio}</td>
-                <td>${element.imagen}</td>
+                <td>
+                <img src="${element.imagen}" alt="" style="width:7rem">
+                </td>
                 <td>${element.aroma}</td>
                 <td>${element.categoria}</td>
                 <td>
@@ -76,13 +78,13 @@ export default class Perfumes{
     {
         let indice=localStorage.getItem("indice")
 
-        JSON.parse(localStorage.getItem("Perfumes"))
+        let lista_producto=JSON.parse(localStorage.getItem("Perfumes"))
 
-        lista_producto[indice].descripcion=document.getElementById("descripcion")
-        lista_producto[indice].precio=document.getElementById("precio")
-        lista_producto[imagen].imagen=document.getElementById("imagen")
-        lista_producto[indice].aroma=document.getElementById("aroma")
-        lista_producto[indice].categoria=document.getElementById("categoria")
+        lista_producto[indice].descripcion=document.getElementById("descripcion").value
+        lista_producto[indice].precio=document.getElementById("precio").value
+        lista_producto[indice].imagen=document.getElementById("imagen").value
+        lista_producto[indice].aroma=document.getElementById("aroma").value
+        lista_producto[indice].categoria=document.getElementById("categoria").value
 
         localStorage.setItem("Perfumes", JSON.stringify(lista_producto))
 
@@ -93,6 +95,11 @@ export default class Perfumes{
         document.getElementById("btn_actualizar").style.display="block"
 
         this.vaciar_producto()
+
+        document.getElementById("btn_actualizar").style.display="none"
+
+        document.getElementById("btn_guardar").style.display="block"
+
     }
 
     vaciar_producto()
