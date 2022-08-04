@@ -37,13 +37,17 @@ export default class Perfumes{
 
         let filas=[]
         lista_producto.forEach((element,index) => {
+
+
+
+
             let fila=`
             <tr>
                 <td>${index+1}</td>
                 <td>${element.descripcion}</td>
                 <td>${element.precio}</td>
                 <td>
-                <img src="${element.imagen}" alt="" style="width:7rem">
+                <img src="${element.imagen}" height="200" width="200">
                 </td>
                 <td>${element.aroma}</td>
                 <td>${element.categoria}</td>

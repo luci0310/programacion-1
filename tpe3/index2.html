@@ -10,55 +10,66 @@
     <script src="bootstrap.bundle.min.js"></script>
 </head>
 <body background="fondo.jpg">
-    <H1>productos</H1>
+
+    <H1 align="center">Productos</H1>
     <br>
+
     <div class="conteiner">
-        <div class="row">
-            <div class="col-lg-8">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+    <div class="row"> 
 
-            <div class="col-lg-8">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
 
-            <div class="col-lg-8">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+        <div class="col-lg-6 mb-3">
+        <div class="container">
+            <div id="row_datos" class="row">
+                
             </div>
         </div>
-        <div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
 
-            </div>
+
         </div>
-        <div class="col-lg-4">
-            <table>
+        <div class="col-lg-4 mb-3">
+            <table class="table">
+                
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>precio</th>
+                </tr>
+
+                <tbody id="body2">
+
+                </tbody>
 
             </table>
+            
+            <button id="btn_finalizar" >Finalizar compra</button>
+        </div>
+
+    </div>
+    </div>
+
+    <div id="mymodal2" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Finalizar compra</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="fw-bold">¿Estás segura de finalizar tu compra?</p>
+              <p style="font-size: small;">(si toca el boton "Confirmar" se confirmara el pedido)</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">X</button>
+              <button type="button" id="btn_finalizar" class="btn btn-danger">Confirmar</button>
+            </div>
+          </div>
         </div>
     </div>
+
+
+   
+
+    <script src="main2.js" type="module"></script>
 </body>
 </html>
