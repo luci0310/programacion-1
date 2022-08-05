@@ -8,24 +8,24 @@ function crear_catalogo(){
 
         let descripcion_cat = null
 
-        switch (element.categoria) {
-            case 0:
+        switch (Number(element.categoria)) {
+            case 1:
               descripcion_cat = 'Aromatizador de telas y ambiente en 120ml'
               break;
-            case 1:
+            case 2:
                 descripcion_cat = 'Aromatizador de telas y ambiente en 500ml'
               break;
-            case 2:
+            case 3:
                 descripcion_cat = 'Aerosol en 270ml'
               break;
-            case 3:
+            case 4:
                 descripcion_cat = 'Perfumes personales femeninos'
               break;
-            case 4:
+            case 5:
                 descripcion_cat='Perfumes personales  masculinos'
              break;
             default:
-                descripcion_cat='No tenemos disponible'
+                descripcion_cat='No contamos con disponibilidad'
         }
 
         let columna=
